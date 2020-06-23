@@ -1,5 +1,5 @@
 # sorts array of numbers in place
-# input: List[] - array of numbers
+# input: nums: List[] - array of numbers
 # output: None
 def insertSort(numArr):
     # starting at second element, traverse list
@@ -18,18 +18,25 @@ def insertSort(numArr):
 
 # Sets file path
 filepath = 'data.txt'
-
+# String to write to output file
+newFileStr = ''
 # opens file and stores in fp
 with open(filepath) as fp:
-   # reads first line of file
-   line = fp.readline()
-   # while there are still existing lines
-   while line:
-       # parse line to strip of \n's an store in array
-       nums = [int(x) for x in line.strip('\n').split(' ')]
-       # perform insertion sort on array of nums
-       print(nums)
-       insertSort(nums)
-       print(nums)
-       # read next line
-       line = fp.readline()
+    # reads first line of file
+    line = fp.readline()
+    # while there are still existing lines
+    while line:
+        # parse line to strip of \n's an store in array
+        nums = [int(x) for x in line.strip('\n').split(' ')]
+        # perform insertion sort on array of nums
+        insertSort(nums)
+        # for each num in num array, write to output file
+        for num in nums:
+           newFileStr += str(num) + ' '
+        newFileStr += '\n'
+        # read next line
+        line = fp.readline()
+
+# write string to output file
+with open('insert.out', 'w') as output:
+    output.write(newFileStr)
