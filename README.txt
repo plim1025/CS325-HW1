@@ -1,11 +1,11 @@
 To run insertsort file:
-python insertsort.py
+    python insertsort.py
 
 insersort output file:
-insert.out
+    insert.out
 
 To run mergesort file:
-python mergesort.py
+    python mergesort.py
 
 mergesort output file:
-merge.out
+    merge.out
