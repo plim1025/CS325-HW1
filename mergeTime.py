@@ -21,7 +21,7 @@ def merge(nums, low, mid, high):
     # keep merging until one array runs out
     while i < n1 and j < n2:
         # if left array value is less than right, place it in main array
-        if leftArr[i] <= rightArr[j]:
+        if leftArr[i] >= rightArr[j]:
             nums[k] = leftArr[i]
             i += 1
         # if right array value is less than left, place it in main array

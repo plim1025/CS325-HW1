@@ -9,7 +9,7 @@ def insertSort(numArr):
         # store last index where list is sorted
         j = i-1
         # search for correct position for cur
-        while j >= 0 and cur < numArr[j]:
+        while j >= 0 and cur > numArr[j]:
             # shift item to make room for cur
             numArr[j+1] = numArr[j]
             j -= 1

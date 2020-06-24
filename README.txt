@@ -9,3 +9,9 @@ To run mergesort file:
 
 mergesort output file:
     merge.out
+
+To run insertTime file:
+    python insertTime.py
+
+To run mergeTime file:
+    python mergeTime.py
