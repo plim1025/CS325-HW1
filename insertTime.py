@@ -2,11 +2,11 @@ from random import randrange
 from time import time
 
 # sorts array of numbers in place
-# input: nums: List[] - array of numbers
+# input: nums: List[] - array of numbers, length: int - length of nums array
 # output: None
-def insertSort(numArr):
+def insertSort(numArr, length):
     # starting at second element, traverse list
-    for i in range(1, len(numArr)):
+    for i in range(1, length):
         # store current list's value
         cur = numArr[i]
         # store last index where list is sorted
@@ -33,7 +33,7 @@ for n in nums:
         # start timer
         start = time()
         # sort array using insert sort
-        insertSort(numArr)
+        insertSort(numArr, n)
         # stop timer
         end = time()
         totalTime += (end - start)
