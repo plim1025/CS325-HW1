@@ -62,8 +62,10 @@ with open(filepath) as fp:
     while line:
         # parse line to strip of \n's an store in array
         nums = [int(x) for x in line.strip('\n').split(' ')]
+        # get length of nums
+        numslen = nums.pop(0)
         # perform insertion sort on array of nums
-        mergeSort(nums, 0, len(nums)-1)
+        mergeSort(nums, 0, numslen-1)
         # for each num in num array, write to output file
         for num in nums:
             newFileStr += str(num) + ' '
