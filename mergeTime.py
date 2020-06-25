@@ -53,19 +53,24 @@ def mergeSort(nums, low, high):
         # then merge the two subarrays
         merge(nums, low, mid, high)
 
-# start timer
-start = time()
-# size of test
-n = 5000
-# fill array with zeroes
-numArr = [0] * n
-# fill array with random nums between 0 - 10,000
-for i in range(n):
-    numArr[i] = randrange(10000)
-# sort array using insert sort
-mergeSort(numArr, 0, n-1)
-# stop timer
-end = time()
-# print timer
-print('Numbers: ' + str(n))
-print('Timer: ' + str(end - start))
+# size of tests
+nums = [1000, 2000, 3000, 4000, 5000, 6000, 7000]
+for n in nums:
+    # fill array with zeroes
+    numArr = [0] * n
+    totalTime = 0
+    # take the average of 30 trials for each number
+    for i in range(100):
+        # fill array with random nums between 0 - 10,000
+        for i in range(n):
+            numArr[i] = randrange(10000)
+        # start timer
+        start = time()
+        # sort array using insert sort
+        mergeSort(numArr, 0, n-1)
+        # stop timer
+        end = time()
+        totalTime += (end - start)
+    # print timer
+    print('Numbers: ' + str(n))
+    print('Time taken: ' + str(totalTime/100))
