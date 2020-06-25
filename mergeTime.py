@@ -72,5 +72,5 @@ for n in nums:
         end = time()
         totalTime += (end - start)
     # print timer
-    print('Numbers: ' + str(n))
+    print('Numbers sorted: ' + str(n))
     print('Time taken: ' + str(totalTime/100))
